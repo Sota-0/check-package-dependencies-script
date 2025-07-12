@@ -5,7 +5,11 @@ from colorama import Fore, init
 
 init(autoreset=True)
 
-# change me
+
+# Note: if a dependency cant be found, re-running the script is useless.
+#       you may need to verify the package name incase of dependency failure.
+
+# CHANGE ME
 dependencies = ["curl", "nano", "PlaceHolder1", "PlaceHolder2"]
 to_install = []
 a = 0
@@ -34,7 +38,10 @@ def main():
                     print("installing...")
                     for i in to_install:
                         os.system(f"sudo apt-get install {i}")
-                    time.sleep(2)
+                    time.sleep(.5)
+                    print("")
+                    print(Fore.MAGENTA + "please re-run the script")
+                    break
 
                 elif command == "n":
                      print(Fore.RED + "Dependencies are REQUIRED")
@@ -47,6 +54,8 @@ def main():
     else:
         print("")
         print("all requirements are met")
+        # ADD NEXT STEP
+        pass
 
 
 
