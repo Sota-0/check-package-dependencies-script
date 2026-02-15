@@ -11,7 +11,7 @@ init(autoreset=True)
 # Check Dependencies
 #============================
 
-dependencies = ["tmp, tmp, nano, tmp"]
+dependencies = ["tmp", "tmp", "nano", "tmp"]
 
 
 # check dependencies
